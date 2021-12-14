@@ -1,0 +1,56 @@
+# Latticework AmberOS service entries description.
+
+cast_play:
+    name: Cast Play
+    description: AmberOS Cast Play.
+    target:
+      description: The entity of the AmberOS to cast; required when multiple Amber/AmberX are configured.
+      example: media_player.amber_256se4a57b_cast_player
+      required: true
+      entity:
+        integration: latticework_amberos
+        domain: media_player
+    fields:
+      filename:
+        name: The filename with path
+        description: The filename with path for playing, it will automatic search the first match in your Amber/AmberX. The path likes (/Music, /Photos, /Videos, /VPHome/admin/MyDocuments)
+        required: true
+        example: "/Music/big_buck_bunny_720p_10mb.mp3"
+        selector:
+          text:
+      source:
+        name: Source
+        description: The source that AmberOS cast to
+        example: '"GoolgeCast"'
+        selector:
+          text:
+
+reboot:
+    name: Reboot
+    description: Reboot the AmberOS.
+    fields:
+      serial:
+        name: Serial
+        description: The serial of the AmberOS to reboot; required when multiple Amber/AmberX are configured.
+        example: 20CAL00620316
+        selector:
+          text:
+
+shutdown:
+    name: Shutdown
+    description: Shutdown the AmberOS.
+    fields:
+      serial:
+        name: Serial
+        description: The serial of the AmberOS to shutdown; required when multiple AmberOS are configured.
+        example: 20CAL00620316
+        selector:
+          text:
+      reason:
+        name: Reason
+        description: extra info for poweroff reason.
+        selector:
+          select:
+            options:
+            - 'off'
+            - 'router off'

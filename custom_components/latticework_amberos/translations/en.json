@@ -1,0 +1,65 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Device is already configured",
+            "reauth_successful": "Re-authentication was successful",
+            "reconfigure_successful": "Re-configuration was successful"
+        },
+        "error": {
+            "cannot_connect": "Failed to connect",
+            "invalid_auth": "Invalid authentication",
+            "missing_data": "Missing data: please retry later or an other configuration",
+            "otp_failed": "Two-step authentication failed, retry with a new pass code",
+            "unknown": "Unexpected error"
+        },
+        "flow_title": "{name} ({host})",
+        "step": {
+            "login": {
+                "data": {
+                    "password": "Password",
+                    "port": "Port",
+                    "ssl": "Uses an SSL certificate",
+                    "username": "Username",
+                    "verify_ssl": "Verify SSL certificate"
+                },
+                "description": "Do you want to setup {name} ({host})?",
+                "title": "Latticework AmberOS"
+            },
+            "reauth": {
+                "data": {
+                    "password": "Password",
+                    "username": "Username"
+                },
+                "description": "Reason: {details}",
+                "title": "Latticework AmberOS Reauthenticate Integration"
+            },
+            "reauth_confirm": {
+                "data": {
+                    "password": "Password",
+                    "username": "Username"
+                },
+                "title": "Latticework AmberOS Reauthenticate Integration"
+            },
+            "user": {
+                "data": {
+                    "host": "Host",
+                    "password": "Password",
+                    "port": "Port",
+                    "ssl": "Uses an SSL certificate",
+                    "username": "Username"
+                },
+                "title": "Latticework AmberOS"
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "scan_interval": "Minutes between scans",
+                    "timeout": "Timeout (seconds)"
+                }
+            }
+        }
+    }
+}
