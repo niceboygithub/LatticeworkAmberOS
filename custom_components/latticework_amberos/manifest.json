@@ -1,0 +1,11 @@
+{
+  "domain": "latticework_amberos",
+  "name": "Latticework AmberOS",
+  "documentation": "",
+  "requirements": ["zeroconf", "py-latticework-amberos==1.0.0"],
+  "codeowners": ["@tsunglung"],
+  "config_flow": true,
+  "version": "1.0.0",
+  "zeroconf": ["_lwfinder._tcp.local."],
+  "iot_class": "local_polling"
+}
